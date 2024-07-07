@@ -1,0 +1,298 @@
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+header {
+    background: whitesmoke;
+    color: black;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+nav {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-icon {
+    display: none;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+    position: absolute;
+    left: 10px;
+    top: 285px;
+}
+
+.content-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 2.5em; /* Increased font size for h2 */
+    margin-bottom: 10px;
+}
+
+.intro {
+    text-align: justify;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.aims-objectives {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.aim-card {
+    flex: 1 1 calc(33.333% - 40px); /* 3 cards per row with space */
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: transform 0.2s ease-in-out;
+}
+
+.aim-card:hover {
+    transform: translateY(-10px); /* Hover effect */
+}
+
+.aim-card h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #4CAF50;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+}
+
+.aim-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left; /* Align list items to the left */
+    margin: 0;
+}
+
+.aim-card ul li {
+    margin-bottom: 10px;
+    text-align: justify; /* Justify text in list items */
+}
+
+.members-section {
+    padding-top: 20px; /* Ensure space from the previous section */
+}
+
+.members-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.members-table th,
+.members-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+.members-table th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+}
+
+.members-table tbody tr:hover {
+    background-color: #f1f1f1; /* Hover effect for table rows */
+}
+
+.member-card {
+    display: none; /* Hide cards by default */
+}
+
+.contact-section {
+    background: #fff;
+    padding: 40px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.contact-section h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: black;
+}
+
+.contact-info, .mission-vision, .value-statement, .contact-details {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact-info p, .mission-vision p, .value-statement p, .contact-details p {
+    margin: 8px 0;
+}
+
+.contact-details a {
+    color: #27ae60;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+.map-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        padding: 30px 0;
+    }
+
+    nav ul {
+        display: none;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    nav ul.show {
+        display: block;
+    }
+
+    .aim-card {
+        flex: 1 1 100%;
+    }
+
+    .members-table {
+        display: none;
+    }
+
+    .members-section .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    .member-card {
+        display: block;
+        flex: 1 1 calc(100% - 40px); /* Full width for small screens */
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        border-radius: 10px;
+        box-sizing: border-box;
+        transition: transform 0.2s ease-in-out;
+        text-align: left;
+    }
+
+    .member-card:hover {
+        transform: translateY(-10px); /* Hover effect */
+    }
+
+    .member-card h4 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 1.5em;
+        color: #4CAF50;
+    }
+
+    .member-card p {
+        margin: 5px 0;
+    }
+
+    .contact-section {
+        padding: 20px;
+        margin: 10px auto;
+        max-width: 100%;
+    }
+
+    .contact-section h2 {
+        font-size: 2rem;
+    }
+
+    .contact-info, .mission-vision, .value-statement, .contact-details {
+        text-align: center;
+    }
+
+    .contact-section {
+        padding: 20px;
+        margin: 10px auto;
+        max-width: 90%;
+        border-radius: 8px;
+        box-sizing: border-box;
+    }
+
+    .contact-section h2 {
+        font-size: 2rem;
+    }
+
+    .contact-info, .mission-vision, .value-statement, .contact-details {
+        text-align: center;
+    }
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
